@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dEE-7S-8X3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dEE-7S-8X3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -22,11 +24,14 @@
                                 <rect key="frame" x="82" y="353" width="250" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pioc-11.png" translatesAutoresizingMaskIntoConstraints="NO" id="aQG-PP-5q7">
-                                <rect key="frame" x="6" y="138" width="420" height="350"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pioc-11.png" translatesAutoresizingMaskIntoConstraints="NO" id="aQG-PP-5q7">
+                                <rect key="frame" x="20" y="20" width="374" height="302"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aQG-PP-5q7" secondAttribute="height" multiplier="187:151" id="12M-uE-4YJ"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-0j-e06">
-                                <rect key="frame" x="175" y="611" width="83" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-0j-e06">
+                                <rect key="frame" x="166" y="413" width="83" height="30"/>
                                 <state key="normal" title="Guest Login"/>
                                 <connections>
                                     <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQ2-Kl-vSW"/>
@@ -36,8 +41,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.69019607839999997" green="0.77647058820000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="aQG-PP-5q7" secondAttribute="trailing" id="8t1-cd-ZKR"/>
                             <constraint firstItem="o6B-i0-Gf7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="93A-0n-kWm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="aQG-PP-5q7" secondAttribute="leading" id="Cry-Gj-KJD"/>
+                            <constraint firstItem="o6B-i0-Gf7" firstAttribute="top" secondItem="aQG-PP-5q7" secondAttribute="bottom" constant="50" id="KxU-kM-Hcc"/>
                             <constraint firstItem="o6B-i0-Gf7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="epb-Gq-472"/>
+                            <constraint firstItem="uaK-0j-e06" firstAttribute="top" secondItem="o6B-i0-Gf7" secondAttribute="bottom" constant="50" id="ftG-pm-dWE"/>
+                            <constraint firstItem="uaK-0j-e06" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iFm-M3-Qms"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M4g-5k-ygG"/>
@@ -1462,12 +1472,12 @@
         <image name="x.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yU0-uZ-gFe"/>
-        <segue reference="KVY-aP-peB"/>
-        <segue reference="lcA-tE-8gB"/>
         <segue reference="Rku-Jg-Wga"/>
+        <segue reference="lcA-tE-8gB"/>
+        <segue reference="ik9-2n-dLf"/>
+        <segue reference="KVY-aP-peB"/>
         <segue reference="qqG-dA-0nB"/>
-        <segue reference="aPV-jI-rfV"/>
         <segue reference="2qg-eZ-7zU"/>
+        <segue reference="aPV-jI-rfV"/>
     </inferredMetricsTieBreakers>
 </document>
